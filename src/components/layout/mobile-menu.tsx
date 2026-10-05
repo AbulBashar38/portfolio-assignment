@@ -18,7 +18,13 @@ import { sectionNumber } from "@/lib/sections";
 import { cn } from "@/lib/utils";
 import type { SectionId } from "@/types";
 
-export function MobileMenu({ active }: { active: SectionId }) {
+interface MobileMenuProps {
+  active: SectionId;
+  /** Called just before scrolling to the chosen section. */
+  onNavigate?: () => void;
+}
+
+export function MobileMenu({ active, onNavigate }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
   // Scrolling while the sheet's scroll lock is active does nothing,
   // so remember the target and scroll once the sheet has closed.
@@ -43,6 +49,7 @@ export function MobileMenu({ active }: { active: SectionId }) {
         onCloseAutoFocus={(event) => {
           if (!target.current) return;
           event.preventDefault();
+          onNavigate?.();
           document.getElementById(target.current)?.scrollIntoView();
           history.replaceState(null, "", `#${target.current}`);
           target.current = null;

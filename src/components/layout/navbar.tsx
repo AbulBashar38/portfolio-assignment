@@ -120,7 +120,7 @@ export function Navbar() {
               <ArrowUpRightIcon data-icon="inline-end" />
             </a>
           </Button>
-          <MobileMenu active={active} />
+          <MobileMenu active={active} onNavigate={pin} />
         </div>
       </Container>
 
