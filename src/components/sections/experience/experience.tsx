@@ -1,5 +1,6 @@
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/layout/section-heading";
+import { Activities } from "@/components/sections/experience/activities";
 import { Timeline } from "@/components/sections/experience/timeline";
 import { WorkEntry } from "@/components/sections/experience/work-entry";
 import { experience } from "@/data/experience";
@@ -20,6 +21,8 @@ export function Experience() {
           ))}
         </div>
       </Timeline>
+
+      <Activities />
     </Section>
   );
 }
