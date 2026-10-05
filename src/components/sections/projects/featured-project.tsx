@@ -1,7 +1,7 @@
 import { ArrowUpRightIcon } from "lucide-react";
-import Image from "next/image";
 
 import { Reveal } from "@/components/motion/reveal";
+import { ProjectMedia } from "@/components/sections/projects/project-media";
 import { StackList } from "@/components/sections/projects/stack-list";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -24,15 +24,7 @@ export function FeaturedProject({ project, index }: FeaturedProjectProps) {
         className={cn("lg:col-span-7", reversed && "lg:order-2")}
         direction={reversed ? "left" : "right"}
       >
-        <div className="relative aspect-[16/10] overflow-hidden rounded-sm border bg-muted">
-          <Image
-            src={project.cover.src}
-            alt={project.cover.alt}
-            fill
-            sizes="(min-width: 1024px) 58vw, 100vw"
-            className="object-cover object-top"
-          />
-        </div>
+        <ProjectMedia image={project.cover} />
       </Reveal>
 
       <Reveal
