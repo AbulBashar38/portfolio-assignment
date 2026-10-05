@@ -96,3 +96,18 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
 ];
+
+/** The headline technologies shown in the scrolling marquee. */
+export const coreStack = [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Redux Toolkit",
+  "Node.js",
+  "Express",
+  "Tailwind CSS",
+  "PostgreSQL",
+  "MongoDB",
+  "Prisma",
+  "Socket.IO",
+];
