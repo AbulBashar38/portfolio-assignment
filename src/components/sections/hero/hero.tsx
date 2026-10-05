@@ -1,6 +1,7 @@
 import { ArrowDownIcon } from "lucide-react";
 
 import { Container } from "@/components/layout/container";
+import { HeroPortrait } from "@/components/sections/hero/hero-portrait";
 import { Reveal } from "@/components/motion/reveal";
 import { TextReveal } from "@/components/motion/text-reveal";
 import { SocialLinks } from "@/components/shared/social-links";
@@ -69,6 +70,10 @@ export function Hero() {
           <Reveal delay={0.8} className="mt-12">
             <SocialLinks />
           </Reveal>
+        </div>
+
+        <div className="lg:col-span-5 lg:pt-8">
+          <HeroPortrait />
         </div>
       </Container>
     </section>
