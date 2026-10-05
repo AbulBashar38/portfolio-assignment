@@ -1,12 +1,62 @@
 # Abul Basar — Portfolio
 
-A single-page personal portfolio built with Next.js. It presents my background, education, skills, projects, experience and contact details in one responsive, animated page.
+### 🔗 Live site: **[portfolio-assignment-pink-ten.vercel.app](https://portfolio-assignment-pink-ten.vercel.app)**
 
-**Live site:** https://portfolio-assignment-pink-ten.vercel.app
+## About the project
 
-## Sections
+A personal portfolio website, built as a web development assignment. It introduces who I am as a software engineer — my background, education, skills, projects, work experience and how to contact me — on a single, fully responsive page.
 
-Home · About Me · Education · Skills · Projects · Experience & Activities · Contact
+The site is built from scratch with Next.js, TypeScript and Tailwind CSS (no page builders or templates), with an editorial design, light and dark themes, and subtle scroll animations.
+
+**Sections:** Home · About Me · Education · Skills · Projects · Experience & Activities · Contact
+
+## Screenshots
+
+### Home — landing page
+
+![Home section with name, role, introduction and portrait](docs/screenshots/home.webp)
+
+### About Me
+
+![About section with photo, bio and quick facts](docs/screenshots/about.webp)
+
+### Education
+
+![Education section with degrees, CGPA and certificates](docs/screenshots/education.webp)
+
+### Skills
+
+![Skills section with grouped skill explorer](docs/screenshots/skills.webp)
+
+### Projects
+
+![Projects section with featured project rows](docs/screenshots/projects.webp)
+
+**Project case study** — each project opens a detailed view with a screenshot gallery, the challenge, approach and outcome.
+
+![Project case study dialog](docs/screenshots/case-study.webp)
+
+### Experience & Activities
+
+![Experience section with work timeline](docs/screenshots/experience.webp)
+
+### Contact
+
+![Contact section with details and contact form](docs/screenshots/contact.webp)
+
+### Dark theme
+
+![Home section in dark theme](docs/screenshots/home-dark.webp)
+
+### Mobile
+
+<table>
+  <tr>
+    <td align="center"><img src="docs/screenshots/mobile-home.webp" alt="Home on mobile" width="260" /><br /><sub>Home</sub></td>
+    <td align="center"><img src="docs/screenshots/mobile-menu.webp" alt="Mobile navigation menu" width="260" /><br /><sub>Navigation menu</sub></td>
+    <td align="center"><img src="docs/screenshots/mobile-projects.webp" alt="Projects on mobile" width="260" /><br /><sub>Projects</sub></td>
+  </tr>
+</table>
 
 ## Features
 
@@ -87,6 +137,7 @@ public/
   images/       profile photos, project screenshots, certificates (WebP)
 docs/
   PLAN.md       build plan and progress
+  screenshots/  README screenshots (desktop and mobile)
 ```
 
 ## Deployment
