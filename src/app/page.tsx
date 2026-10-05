@@ -4,18 +4,14 @@ import { Reveal } from "@/components/motion/reveal";
 import { About } from "@/components/sections/about/about";
 import { Education } from "@/components/sections/education/education";
 import { Hero } from "@/components/sections/hero/hero";
+import { Skills } from "@/components/sections/skills/skills";
 import type { SectionId } from "@/types";
 
 const outline: {
-  id: Exclude<SectionId, "home" | "about" | "education">;
+  id: Exclude<SectionId, "home" | "about" | "education" | "skills">;
   title: string;
   description: string;
 }[] = [
-  {
-    id: "skills",
-    title: "Tools I reach for.",
-    description: "The stack I use day to day, grouped by where it fits.",
-  },
   {
     id: "projects",
     title: "Selected work.",
@@ -39,6 +35,7 @@ export default function Home() {
       <Hero />
       <About />
       <Education />
+      <Skills />
 
       {outline.map((section) => (
         <Section key={section.id} id={section.id}>
