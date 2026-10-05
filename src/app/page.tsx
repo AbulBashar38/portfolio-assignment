@@ -3,6 +3,7 @@ import { SectionHeading } from "@/components/layout/section-heading";
 import { Reveal } from "@/components/motion/reveal";
 import { About } from "@/components/sections/about/about";
 import { Education } from "@/components/sections/education/education";
+import { Experience } from "@/components/sections/experience/experience";
 import { Hero } from "@/components/sections/hero/hero";
 import { Projects } from "@/components/sections/projects/projects";
 import { Skills } from "@/components/sections/skills/skills";
@@ -16,11 +17,6 @@ const outline: {
   title: string;
   description: string;
 }[] = [
-  {
-    id: "experience",
-    title: "Where I've worked.",
-    description: "Roles, teams and the communities I contribute to.",
-  },
   {
     id: "contact",
     title: "Let's build something.",
@@ -36,6 +32,7 @@ export default function Home() {
       <Education />
       <Skills />
       <Projects />
+      <Experience />
 
       {outline.map((section) => (
         <Section key={section.id} id={section.id}>
