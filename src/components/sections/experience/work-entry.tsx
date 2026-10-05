@@ -10,7 +10,9 @@ export function WorkEntry({ entry }: { entry: Experience }) {
         aria-hidden
         className={cn(
           "absolute top-1 left-0 size-2.5 -translate-x-1/2 rounded-full border-2 border-background ring-1",
-          entry.current ? "bg-brand ring-brand" : "bg-muted ring-border",
+          entry.current
+            ? "bg-brand ring-brand"
+            : "bg-foreground/40 ring-foreground/30",
         )}
       />
 
