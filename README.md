@@ -9,7 +9,10 @@ Home · About Me · Education · Skills · Projects · Experience & Activities �
 ## Tech stack
 
 - [Next.js](https://nextjs.org) (App Router) + TypeScript
-- Tailwind CSS
+- Tailwind CSS v4 with light / dark theme tokens
+- [shadcn/ui](https://ui.shadcn.com) on Radix primitives
+- next-themes, lucide-react
+- Fonts: Instrument Serif, Geist, Geist Mono (via `next/font`)
 - ESLint
 
 ## Getting started
@@ -35,6 +38,10 @@ pnpm dev        # http://localhost:3000
 ```text
 src/
   app/          root layout, page and global styles
+  components/
+    ui/         shadcn/ui primitives
+    providers/  theme provider
+  lib/          shared utilities
 docs/
   PLAN.md       build plan and progress
 ```
