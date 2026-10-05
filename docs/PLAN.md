@@ -24,7 +24,7 @@ Deadline: **9 October 2026, 11:59 PM**.
 
 ## Phase 3 — Polish & ship
 
-- [ ] **Step 13 — Motion pass.** Tune page-load sequence, scroll reveals, hover/micro-interactions consistently across sections.
+- [x] **Step 13 — Motion pass.** Tune page-load sequence, scroll reveals, hover/micro-interactions consistently across sections.
 - [ ] **Step 14 — Responsive & a11y QA.** Test 375 / 768 / 1280 / 1440, keyboard nav, focus, contrast, alt text; fix issues.
 - [ ] **Step 15 — SEO & performance.** Metadata, OG image, favicon/manifest, sitemap/robots, 404 page, image optimization, Lighthouse pass.
 - [ ] **Step 16 — Deploy.** Final README, push to public GitHub, deploy on Vercel, add live link to README.
