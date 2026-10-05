@@ -26,7 +26,7 @@ export function Footer() {
           </p>
           <a
             href="#home"
-            className="group inline-flex items-center gap-2 transition-colors hover:text-foreground sm:justify-self-end"
+            className="group inline-flex min-h-6 items-center gap-2 py-1 transition-colors hover:text-foreground sm:justify-self-end"
           >
             Back to top
             <ArrowUpIcon className="size-3.5 transition-transform duration-300 group-hover:-translate-y-0.5" />
