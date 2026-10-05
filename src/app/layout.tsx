@@ -45,6 +45,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           disableTransitionOnChange
         >
           <MotionProvider>
+            <a
+              href="#content"
+              className="sr-only rounded-md bg-foreground px-4 py-2 text-sm text-background focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[70]"
+            >
+              Skip to content
+            </a>
             <Navbar />
             {children}
             <Footer />

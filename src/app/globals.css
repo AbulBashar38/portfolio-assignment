@@ -124,6 +124,11 @@
   p {
     text-wrap: pretty;
   }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
   ::selection {
     @apply bg-brand text-brand-foreground;
   }

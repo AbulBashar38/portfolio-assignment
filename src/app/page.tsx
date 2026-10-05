@@ -8,7 +8,7 @@ import { Skills } from "@/components/sections/skills/skills";
 
 export default function Home() {
   return (
-    <main>
+    <main id="content" tabIndex={-1} className="outline-none">
       <Hero />
       <About />
       <Education />
