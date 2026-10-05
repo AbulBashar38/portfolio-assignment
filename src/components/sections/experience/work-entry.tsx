@@ -1,10 +1,19 @@
 import { Reveal } from "@/components/motion/reveal";
 import { StackList } from "@/components/sections/projects/stack-list";
+import { cn } from "@/lib/utils";
 import type { Experience } from "@/types";
 
 export function WorkEntry({ entry }: { entry: Experience }) {
   return (
-    <article className="relative grid gap-6 pl-8 md:grid-cols-12 md:gap-8 md:pl-0">
+    <article className="relative grid gap-6 pl-8 md:grid-cols-12 md:gap-8 md:pl-12">
+      <span
+        aria-hidden
+        className={cn(
+          "absolute top-1 left-0 size-2.5 -translate-x-1/2 rounded-full border-2 border-background ring-1",
+          entry.current ? "bg-brand ring-brand" : "bg-muted ring-border",
+        )}
+      />
+
       <Reveal direction="none" className="md:col-span-3">
         <p className="font-mono text-xs tracking-[0.2em] uppercase">
           {entry.period}
