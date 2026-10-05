@@ -60,6 +60,7 @@ export interface Education {
   field: string;
   period: string;
   grade: string;
+  gradeScale: string;
   location: string;
   current?: boolean;
 }

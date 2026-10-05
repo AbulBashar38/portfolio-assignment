@@ -8,6 +8,7 @@ export const education: Education[] = [
     field: "Computer Science & Engineering",
     period: "2024 — 2027",
     grade: "3.75",
+    gradeScale: "4.00",
     location: "Tejgaon, Dhaka",
     current: true,
   },
@@ -18,6 +19,7 @@ export const education: Education[] = [
     field: "Electrical Technology",
     period: "2019 — 2024",
     grade: "3.87",
+    gradeScale: "4.00",
     location: "Mohammadpur, Dhaka",
   },
 ];

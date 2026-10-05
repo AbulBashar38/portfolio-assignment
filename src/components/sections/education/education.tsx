@@ -41,6 +41,15 @@ export function Education() {
                 <span className="text-foreground"> — {entry.field}</span>
               </p>
             </div>
+
+            <div className="flex items-baseline gap-3 md:col-span-3 md:flex-col md:items-end md:gap-1">
+              <p className="font-display text-5xl leading-none tracking-tight tabular-nums md:text-6xl">
+                {entry.grade}
+              </p>
+              <p className="font-mono text-[0.6875rem] tracking-[0.2em] text-muted-foreground uppercase">
+                CGPA / {entry.gradeScale}
+              </p>
+            </div>
           </StaggerItem>
         ))}
       </Stagger>
