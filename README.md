@@ -31,12 +31,13 @@ pnpm dev        # http://localhost:3000
 
 ## Scripts
 
-| Command      | Description                  |
-| ------------ | ---------------------------- |
-| `pnpm dev`   | Start the development server |
-| `pnpm build` | Create a production build    |
-| `pnpm start` | Serve the production build   |
-| `pnpm lint`  | Run ESLint                   |
+| Command       | Description                  |
+| ------------- | ---------------------------- |
+| `pnpm dev`    | Start the development server |
+| `pnpm build`  | Create a production build    |
+| `pnpm start`  | Serve the production build   |
+| `pnpm lint`   | Run ESLint                   |
+| `pnpm format` | Format code with Prettier    |
 
 ## Project structure
 
@@ -47,6 +48,8 @@ src/
     ui/         shadcn/ui primitives
     layout/     navbar, mobile menu, theme toggle, container, section heading
     motion/     reusable animation wrappers (Reveal, Stagger, TextReveal)
+    sections/   page sections (hero, …)
+    shared/     small shared pieces (social links)
     providers/  theme and motion providers
   hooks/        client hooks (active section, mounted)
   data/         all site content (profile, education, experience, projects, skills…)
