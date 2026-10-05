@@ -1,6 +1,7 @@
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { Stagger, StaggerItem } from "@/components/motion/stagger";
+import { Certifications } from "@/components/sections/education/certifications";
 import { education } from "@/data/education";
 
 export function Education() {
@@ -58,6 +59,8 @@ export function Education() {
           </StaggerItem>
         ))}
       </Stagger>
+
+      <Certifications />
     </Section>
   );
 }
