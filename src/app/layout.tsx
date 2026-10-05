@@ -31,7 +31,7 @@ const xHandle = profile.socials.find(
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title,
+  title: { default: title, template: `%s — ${profile.name}` },
   description: profile.summary,
   applicationName: profile.name,
   authors: [{ name: profile.name, url: siteUrl }],
