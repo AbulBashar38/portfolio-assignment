@@ -16,6 +16,19 @@ Home · About Me · Education · Skills · Projects · Experience & Activities �
 - Validated contact form that opens the visitor's email app with the message prefilled
 - Fully responsive from small phones to large desktops
 
+## Quality
+
+Lighthouse (production build, local):
+
+| Category       | Mobile | Desktop |
+| -------------- | ------ | ------- |
+| Performance    | 95     | 99      |
+| Accessibility  | 100    | 100     |
+| Best Practices | 100    | 100     |
+| SEO            | 100    | 100     |
+
+Also included: Open Graph share image, sitemap, robots.txt, web app manifest, structured data (schema.org `Person`) and a custom 404 page.
+
 ## Tech stack
 
 - [Next.js](https://nextjs.org) (App Router) + TypeScript
