@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { profile } from "@/data/profile";
 
 export default function Home() {
   return (
@@ -7,12 +8,11 @@ export default function Home() {
         01 — Home
       </p>
       <h1 className="font-display text-6xl leading-[0.95] tracking-tight md:text-8xl">
-        Abul Basar
-        <span className="block italic text-brand">Software Engineer</span>
+        {profile.name}
+        <span className="block italic text-brand">{profile.role}</span>
       </h1>
       <p className="max-w-[60ch] text-lg text-muted-foreground">
-        Building scalable, high-performance web applications with React,
-        Next.js and TypeScript.
+        {profile.summary}
       </p>
       <div className="flex gap-3">
         <Button size="lg">View projects</Button>
