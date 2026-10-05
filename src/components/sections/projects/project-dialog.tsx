@@ -14,9 +14,9 @@ import type { Project } from "@/types";
 
 function Label({ children }: { children: React.ReactNode }) {
   return (
-    <h4 className="font-mono text-[0.6875rem] tracking-[0.2em] text-muted-foreground uppercase">
+    <h3 className="font-mono text-[0.6875rem] tracking-[0.2em] text-muted-foreground uppercase">
       {children}
-    </h4>
+    </h3>
   );
 }
 
