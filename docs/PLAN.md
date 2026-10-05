@@ -6,7 +6,7 @@ Deadline: **9 October 2026, 11:59 PM**.
 ## Phase 1 — Foundation
 
 - [x] **Step 0 — Project docs.** Build plan and project guidelines.
-- [ ] **Step 1 — Scaffold.** Next.js + TypeScript + Tailwind + ESLint at repo root with pnpm; strip boilerplate; base README.
+- [x] **Step 1 — Scaffold.** Next.js + TypeScript + Tailwind + ESLint at repo root with pnpm; strip boilerplate; base README.
 - [ ] **Step 2 — Design system.** Fonts via `next/font`, color tokens (light/dark), Tailwind theme, globals, shadcn init + `cn` util, theme provider.
 - [ ] **Step 3 — Content layer.** Types + `src/data/*` (profile, education, experience, activities, projects, skills, achievements); copy needed images into `public/images/`.
 - [ ] **Step 4 — Layout primitives.** Container, Section wrapper with numbered label, SectionHeading, motion wrappers (`Reveal`, `Stagger`), reduced-motion support.
