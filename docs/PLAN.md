@@ -15,7 +15,7 @@ Deadline: **9 October 2026, 11:59 PM**.
 
 - [x] **Step 5 — Navbar.** Sticky header, smooth-scroll anchors, active-section highlight, mobile Sheet menu, theme toggle.
 - [x] **Step 6 — Home / Hero.** Name, role, short pitch, CTAs (projects, resume), social links, portrait, animated headline, subtle shapes.
-- [ ] **Step 7 — About Me.** Bio, photo, quick facts, animated stats counters.
+- [x] **Step 7 — About Me.** Bio, photo, quick facts, animated stats counters.
 - [ ] **Step 8 — Education.** Degrees (SEU, Polytechnic) with CGPA, period, location; certifications.
 - [ ] **Step 9 — Skills.** Grouped categories (frontend, backend, architecture, quality, tools, leadership), tech marquee, hover states — no percentage bars.
 - [ ] **Step 10 — Projects.** Featured project layout + grid, tags, live links, detail Dialog with screenshot gallery, challenge/solution/results.
