@@ -15,6 +15,10 @@ Home · About Me · Education · Skills · Projects · Experience & Activities �
 - Fonts: Instrument Serif, Geist, Geist Mono (via `next/font`)
 - ESLint
 
+## Editing content
+
+All text and image references live in `src/data/`. Update those files to change what the site shows — components never hardcode personal details.
+
 ## Getting started
 
 Requires Node.js 20+ and pnpm.
@@ -41,7 +45,11 @@ src/
   components/
     ui/         shadcn/ui primitives
     providers/  theme provider
+  data/         all site content (profile, education, experience, projects, skills…)
   lib/          shared utilities
+  types/        shared TypeScript types
+public/
+  images/       profile photos, project screenshots, certificates (WebP)
 docs/
   PLAN.md       build plan and progress
 ```
