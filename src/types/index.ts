@@ -44,6 +44,8 @@ export interface Profile {
   phone: string;
   location: string;
   availability: string;
+  focus: string[];
+  languages: string[];
   resumeUrl: string;
   portrait: ImageAsset;
   aboutPhoto: ImageAsset;

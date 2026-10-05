@@ -16,6 +16,8 @@ export const profile: Profile = {
   phone: "+880 1908 899996",
   location: "Dhaka, Bangladesh",
   availability: "Available for new opportunities",
+  focus: ["Frontend architecture", "Performance", "Team leadership"],
+  languages: ["Bengali", "English"],
   resumeUrl:
     "https://drive.google.com/file/d/1r5lye-VSh5gaexeSSUXiTjK48lcESKW8/view?usp=sharing",
   portrait: {
