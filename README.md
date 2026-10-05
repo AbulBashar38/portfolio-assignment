@@ -6,6 +6,16 @@ A single-page personal portfolio built with Next.js. It presents my background, 
 
 Home · About Me · Education · Skills · Projects · Experience & Activities · Contact
 
+## Features
+
+- Single page with smooth-scrolling section navigation and active-section highlighting
+- Light and dark themes that follow the system setting
+- Scroll-triggered animations that respect the "reduce motion" accessibility setting
+- Project case studies in an accessible dialog with a screenshot gallery
+- Certificate previews, an interactive skills explorer and a work timeline
+- Validated contact form that opens the visitor's email app with the message prefilled
+- Fully responsive from small phones to large desktops
+
 ## Tech stack
 
 - [Next.js](https://nextjs.org) (App Router) + TypeScript
@@ -13,6 +23,7 @@ Home · About Me · Education · Skills · Projects · Experience & Activities �
 - [shadcn/ui](https://ui.shadcn.com) on Radix primitives
 - [Motion](https://motion.dev) for scroll and text animations (respects reduced-motion)
 - next-themes, lucide-react
+- react-hook-form + zod for form validation
 - Fonts: Instrument Serif, Geist, Geist Mono (via `next/font`)
 - ESLint
 
