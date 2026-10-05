@@ -24,6 +24,7 @@ const wordVariants: Variants = {
 
 interface TextRevealProps {
   text: string;
+  id?: string;
   as?: keyof typeof tags;
   className?: string;
   delay?: number;
@@ -34,6 +35,7 @@ interface TextRevealProps {
 /** Slides each word up from behind a mask. Screen readers get the plain text. */
 export function TextReveal({
   text,
+  id,
   as = "h2",
   className,
   delay = 0,
@@ -47,6 +49,7 @@ export function TextReveal({
 
   return (
     <Component
+      id={id}
       aria-label={text}
       className={className}
       initial="hidden"
