@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Old portfolio kept locally for reference only.
+    "example/**",
   ]),
 ]);
 
