@@ -41,7 +41,6 @@ export function Hero() {
 
           <h1
             id="home-title"
-            aria-label={profile.name}
             className="mt-5 font-display text-[clamp(3.75rem,12vw,8rem)] leading-[0.86] tracking-[-0.02em] lg:text-[clamp(4.5rem,14vh,8rem)]"
           >
             <TextReveal

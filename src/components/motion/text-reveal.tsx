@@ -32,7 +32,10 @@ interface TextRevealProps {
   onMount?: boolean;
 }
 
-/** Slides each word up from behind a mask. Screen readers get the plain text. */
+/**
+ * Slides each word up from behind a mask. Screen readers get the plain text
+ * from a visually hidden copy; the animated words are hidden from them.
+ */
 export function TextReveal({
   text,
   id,
@@ -50,7 +53,6 @@ export function TextReveal({
   return (
     <Component
       id={id}
-      aria-label={text}
       className={className}
       initial="hidden"
       {...trigger}
@@ -61,6 +63,7 @@ export function TextReveal({
         },
       }}
     >
+      <span className="sr-only">{text}</span>
       {words.map((word, index) => (
         <Fragment key={`${word}-${index}`}>
           <span
