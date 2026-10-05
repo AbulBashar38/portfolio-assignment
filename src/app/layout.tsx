@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
 import { Grain } from "@/components/layout/grain";
@@ -6,6 +6,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { MotionProvider } from "@/components/providers/motion-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { profile } from "@/data/profile";
+import { siteUrl, themeColors } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,9 +26,52 @@ const instrumentSerif = Instrument_Serif({
   style: ["normal", "italic"],
 });
 
+const title = `${profile.name} — ${profile.role}`;
+const xHandle = profile.socials.find(
+  (social) => social.platform === "x",
+)?.handle;
+
 export const metadata: Metadata = {
-  title: `${profile.name} — ${profile.role}`,
+  metadataBase: new URL(siteUrl),
+  title,
   description: profile.summary,
+  applicationName: profile.name,
+  authors: [{ name: profile.name, url: siteUrl }],
+  creator: profile.name,
+  keywords: [
+    profile.name,
+    "Frontend Engineer",
+    "Software Engineer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Portfolio",
+    "Dhaka",
+    "Bangladesh",
+  ],
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "profile",
+    url: "/",
+    siteName: profile.name,
+    title,
+    description: profile.summary,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description: profile.summary,
+    creator: xHandle,
+  },
+  robots: { index: true, follow: true },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: themeColors.light },
+    { media: "(prefers-color-scheme: dark)", color: themeColors.dark },
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
