@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Navbar } from "@/components/layout/navbar";
 import { MotionProvider } from "@/components/providers/motion-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { profile } from "@/data/profile";
@@ -41,7 +42,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           enableSystem
           disableTransitionOnChange
         >
-          <MotionProvider>{children}</MotionProvider>
+          <MotionProvider>
+            <Navbar />
+            {children}
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>
