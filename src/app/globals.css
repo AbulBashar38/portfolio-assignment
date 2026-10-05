@@ -4,6 +4,19 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --animate-marquee: marquee var(--marquee-duration, 40s) linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -98,6 +111,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Full-bleed elements (marquee) must never cause sideways scrolling. */
+    overflow-x: clip;
     font-feature-settings: "ss01", "cv11";
     text-rendering: optimizeLegibility;
   }
