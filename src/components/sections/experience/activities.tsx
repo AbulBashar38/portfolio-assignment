@@ -4,7 +4,7 @@ import { activities } from "@/data/activities";
 
 export function Activities() {
   return (
-    <div className="mt-32 grid gap-8 md:mt-40 md:grid-cols-12">
+    <div className="mt-24 grid gap-8 md:mt-32 md:grid-cols-12">
       <Reveal className="md:col-span-3">
         <h3 className="font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase">
           Leadership & community

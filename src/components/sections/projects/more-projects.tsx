@@ -10,7 +10,7 @@ export function MoreProjects({ projects }: { projects: Project[] }) {
   if (projects.length === 0) return null;
 
   return (
-    <div className="mt-32 md:mt-40">
+    <div className="mt-24 md:mt-32">
       <Reveal>
         <h3 className="font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase">
           More work
