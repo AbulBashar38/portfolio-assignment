@@ -107,6 +107,8 @@
     @apply font-sans;
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+    /* Elements waiting to slide in from the side must never widen the page. */
+    overflow-x: clip;
     -webkit-text-size-adjust: 100%;
   }
   body {
