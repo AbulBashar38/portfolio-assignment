@@ -1,7 +1,8 @@
 "use client";
 
 import { ArrowUpRightIcon } from "lucide-react";
-import { motion } from "motion/react";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import { useState } from "react";
 
 import { Container } from "@/components/layout/container";
 import { MobileMenu } from "@/components/layout/mobile-menu";
@@ -17,9 +18,28 @@ const links = navigation.filter((item) => item.id !== "home");
 
 export function Navbar() {
   const active = useActiveSection(sectionIds);
+  const { scrollY } = useScroll();
+  const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (y) => {
+    const previous = scrollY.getPrevious() ?? 0;
+    setScrolled(y > 16);
+    // Hide while reading downwards, bring back on any upward scroll.
+    setHidden(y > previous && y > 240);
+  });
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <motion.header
+      animate={{ y: hidden ? "-100%" : "0%" }}
+      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 border-b transition-colors duration-300",
+        scrolled
+          ? "border-border/70 bg-background/85 backdrop-blur-md"
+          : "border-transparent",
+      )}
+    >
       <Container className="flex h-16 items-center justify-between gap-6">
         <a
           href="#home"
@@ -62,20 +82,20 @@ export function Navbar() {
 
         <div className="flex items-center gap-1">
           <ThemeToggle />
-          <MobileMenu active={active} />
           <Button
             variant="outline"
             size="sm"
             asChild
-            className="hidden sm:inline-flex"
+            className="ml-1 hidden sm:inline-flex"
           >
             <a href={profile.resumeUrl} target="_blank" rel="noreferrer">
               Resume
               <ArrowUpRightIcon data-icon="inline-end" />
             </a>
           </Button>
+          <MobileMenu active={active} />
         </div>
       </Container>
-    </header>
+    </motion.header>
   );
 }
