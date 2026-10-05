@@ -1,9 +1,11 @@
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { FeaturedProject } from "@/components/sections/projects/featured-project";
+import { MoreProjects } from "@/components/sections/projects/more-projects";
 import { projects } from "@/data/projects";
 
 const featured = projects.filter((project) => project.featured);
+const others = projects.filter((project) => !project.featured);
 
 export function Projects() {
   return (
@@ -19,6 +21,8 @@ export function Projects() {
           <FeaturedProject key={project.id} project={project} index={index} />
         ))}
       </div>
+
+      <MoreProjects projects={others} />
     </Section>
   );
 }
