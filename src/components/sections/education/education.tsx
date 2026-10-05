@@ -17,8 +17,13 @@ export function Education() {
           <StaggerItem
             as="li"
             key={entry.id}
-            className="grid gap-6 border-t py-10 md:grid-cols-12 md:gap-8 md:py-12"
+            className="group relative grid gap-6 border-t py-10 md:grid-cols-12 md:gap-8 md:py-12"
           >
+            <span
+              aria-hidden
+              className="absolute inset-x-0 -top-px h-px origin-left scale-x-0 bg-brand transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100"
+            />
+
             <div className="flex flex-col gap-2 md:col-span-3">
               <p className="font-mono text-xs tracking-[0.2em] uppercase">
                 {entry.period}
@@ -33,7 +38,7 @@ export function Education() {
             </div>
 
             <div className="md:col-span-6">
-              <h3 className="font-display text-3xl leading-tight tracking-tight md:text-4xl">
+              <h3 className="font-display text-3xl leading-tight tracking-tight transition-transform duration-500 group-hover:translate-x-1.5 md:text-4xl">
                 {entry.institution}
               </h3>
               <p className="mt-3 text-base text-muted-foreground md:text-lg">
