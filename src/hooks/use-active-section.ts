@@ -7,6 +7,8 @@ import type { SectionId } from "@/types";
 /**
  * Returns the id of the section currently crossing the middle of the viewport.
  * A thin observation band avoids flicker when two sections are both partly visible.
+ * At the very bottom of the page the last section wins, since a short final
+ * section may never reach the middle of the viewport.
  */
 export function useActiveSection(ids: SectionId[]) {
   const [active, setActive] = useState<SectionId>(ids[0]);
@@ -25,8 +27,19 @@ export function useActiveSection(ids: SectionId[]) {
       { rootMargin: "-45% 0px -50% 0px" },
     );
 
+    const onScroll = () => {
+      const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2;
+      if (atBottom) setActive(ids[ids.length - 1]);
+    };
+
     elements.forEach((element) => observer.observe(element));
-    return () => observer.disconnect();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", onScroll);
+    };
   }, [ids]);
 
   return active;
