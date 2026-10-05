@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { navigation } from "@/data/navigation";
 import { profile } from "@/data/profile";
 import { useActiveSection } from "@/hooks/use-active-section";
+import { easeOut } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 const sectionIds = navigation.map((item) => item.id);
@@ -56,8 +57,9 @@ export function Navbar() {
 
   return (
     <motion.header
+      initial={{ y: "-100%" }}
       animate={{ y: hidden ? "-100%" : "0%" }}
-      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.5, ease: easeOut }}
       className={cn(
         "fixed inset-x-0 top-0 z-50 border-b transition-colors duration-300",
         scrolled
