@@ -11,6 +11,7 @@ Home · About Me · Education · Skills · Projects · Experience & Activities �
 - [Next.js](https://nextjs.org) (App Router) + TypeScript
 - Tailwind CSS v4 with light / dark theme tokens
 - [shadcn/ui](https://ui.shadcn.com) on Radix primitives
+- [Motion](https://motion.dev) for scroll and text animations (respects reduced-motion)
 - next-themes, lucide-react
 - Fonts: Instrument Serif, Geist, Geist Mono (via `next/font`)
 - ESLint
@@ -44,7 +45,9 @@ src/
   app/          root layout, page and global styles
   components/
     ui/         shadcn/ui primitives
-    providers/  theme provider
+    layout/     container, section and section heading
+    motion/     reusable animation wrappers (Reveal, Stagger, TextReveal)
+    providers/  theme and motion providers
   data/         all site content (profile, education, experience, projects, skills…)
   lib/          shared utilities
   types/        shared TypeScript types
