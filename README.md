@@ -2,6 +2,8 @@
 
 A single-page personal portfolio built with Next.js. It presents my background, education, skills, projects, experience and contact details in one responsive, animated page.
 
+**Live site:** _deployment link coming soon_
+
 ## Sections
 
 Home · About Me · Education · Skills · Projects · Experience & Activities · Contact
@@ -67,20 +69,29 @@ pnpm dev        # http://localhost:3000
 
 ```text
 src/
-  app/          root layout, page and global styles
+  app/          layout, page, 404, metadata routes (sitemap, robots, manifest, OG image)
+  assets/og/    font and photo used to render the share image
   components/
     ui/         shadcn/ui primitives
     layout/     navbar, mobile menu, theme toggle, container, section heading
     motion/     reusable animation wrappers (Reveal, Stagger, TextReveal)
-    sections/   page sections (hero, …)
+    sections/   page sections: hero, about, education, skills, projects, experience, contact
+    seo/        structured data
     shared/     small shared pieces (social links)
     providers/  theme and motion providers
-  hooks/        client hooks (active section, mounted)
+  hooks/        client hooks (active section, mounted, parallax)
   data/         all site content (profile, education, experience, projects, skills…)
-  lib/          shared utilities
+  lib/          utilities, motion presets, site URL
   types/        shared TypeScript types
 public/
   images/       profile photos, project screenshots, certificates (WebP)
 docs/
   PLAN.md       build plan and progress
 ```
+
+## Deployment
+
+The site is a fully static Next.js build, deployed on [Vercel](https://vercel.com):
+
+1. Import the GitHub repository in Vercel — the default Next.js settings work as-is.
+2. Optionally set `NEXT_PUBLIC_SITE_URL` to a custom domain; otherwise the Vercel production URL is used for metadata, the sitemap and the share image.
