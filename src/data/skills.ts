@@ -4,7 +4,8 @@ export const skillGroups: SkillGroup[] = [
   {
     id: "frontend",
     title: "Frontend",
-    description: "Where I spend most of my time — interfaces, state and the component systems behind them.",
+    description:
+      "Where I spend most of my time — interfaces, state and the component systems behind them.",
     skills: [
       "React",
       "Next.js",
@@ -23,7 +24,8 @@ export const skillGroups: SkillGroup[] = [
   {
     id: "backend",
     title: "Backend",
-    description: "APIs, data models and real-time features to carry a feature end to end.",
+    description:
+      "APIs, data models and real-time features to carry a feature end to end.",
     skills: [
       "Node.js",
       "Express",
@@ -39,7 +41,8 @@ export const skillGroups: SkillGroup[] = [
   {
     id: "architecture",
     title: "Architecture & Performance",
-    description: "Structuring codebases that scale with the team, and keeping them fast.",
+    description:
+      "Structuring codebases that scale with the team, and keeping them fast.",
     skills: [
       "SSR / ISR / SSG",
       "Feature-based architecture",
@@ -81,7 +84,8 @@ export const skillGroups: SkillGroup[] = [
   {
     id: "leadership",
     title: "Leadership",
-    description: "Leading frontend teams of up to six engineers across countries.",
+    description:
+      "Leading frontend teams of up to six engineers across countries.",
     skills: [
       "Technical leadership",
       "Frontend architecture",

@@ -21,7 +21,7 @@ export function Hero() {
       <Container className="grid gap-14 lg:grid-cols-12 lg:gap-10">
         <div className="flex flex-col lg:col-span-7">
           <Reveal direction="none">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            <p className="font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase">
               {profile.location}
             </p>
           </Reveal>
@@ -46,7 +46,7 @@ export function Hero() {
             onMount
             delay={0.35}
             text={profile.role}
-            className="mt-5 font-display text-3xl italic text-brand md:text-4xl"
+            className="mt-5 font-display text-3xl text-brand italic md:text-4xl"
           />
 
           <Reveal delay={0.6}>

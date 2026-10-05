@@ -14,7 +14,7 @@ export function SocialLinks({ className }: { className?: string }) {
             target="_blank"
             rel="noreferrer"
             aria-label={`${social.label} (${social.handle})`}
-            className="group inline-flex items-center gap-1 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
+            className="group inline-flex items-center gap-1 font-mono text-xs tracking-[0.18em] text-muted-foreground uppercase transition-colors hover:text-foreground"
           >
             <span className="bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-left-bottom bg-no-repeat pb-0.5 transition-[background-size] duration-300 group-hover:bg-[length:100%_1px]">
               {social.label}

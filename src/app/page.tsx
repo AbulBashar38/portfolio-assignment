@@ -4,7 +4,11 @@ import { Reveal } from "@/components/motion/reveal";
 import { Hero } from "@/components/sections/hero/hero";
 import type { SectionId } from "@/types";
 
-const outline: { id: Exclude<SectionId, "home">; title: string; description: string }[] = [
+const outline: {
+  id: Exclude<SectionId, "home">;
+  title: string;
+  description: string;
+}[] = [
   {
     id: "about",
     title: "Engineer, team lead, student.",
@@ -50,7 +54,7 @@ export default function Home() {
             description={section.description}
           />
           <Reveal>
-            <div className="rounded-lg border border-dashed p-10 text-center font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            <div className="rounded-lg border border-dashed p-10 text-center font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase">
               Section content
             </div>
           </Reveal>

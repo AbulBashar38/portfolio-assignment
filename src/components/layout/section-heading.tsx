@@ -29,7 +29,7 @@ export function SectionHeading({
       )}
     >
       <Reveal direction="none" className="md:col-span-3">
-        <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
+        <p className="flex items-center gap-3 font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase">
           <span className="text-brand">{sectionNumber(id)}</span>
           <span aria-hidden className="h-px w-8 bg-border" />
           {sectionLabel(id)}

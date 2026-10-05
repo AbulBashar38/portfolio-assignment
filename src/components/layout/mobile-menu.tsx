@@ -38,7 +38,12 @@ export function MobileMenu({ active, onNavigate }: MobileMenuProps) {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="md:hidden" aria-label="Open menu">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="md:hidden"
+          aria-label="Open menu"
+        >
           <MenuIcon className="size-5" />
         </Button>
       </SheetTrigger>
@@ -59,7 +64,7 @@ export function MobileMenu({ active, onNavigate }: MobileMenuProps) {
           <SheetTitle className="font-display text-2xl font-normal">
             {profile.name}
           </SheetTitle>
-          <SheetDescription className="font-mono text-xs uppercase tracking-[0.2em]">
+          <SheetDescription className="font-mono text-xs tracking-[0.2em] uppercase">
             {profile.role}
           </SheetDescription>
         </div>
@@ -68,13 +73,20 @@ export function MobileMenu({ active, onNavigate }: MobileMenuProps) {
           <motion.ul
             initial="hidden"
             animate={open ? "visible" : "hidden"}
-            variants={{ visible: { transition: { staggerChildren: 0.05, delayChildren: 0.1 } } }}
+            variants={{
+              visible: {
+                transition: { staggerChildren: 0.05, delayChildren: 0.1 },
+              },
+            }}
             className="flex flex-col"
           >
             {navigation.map((item) => (
               <motion.li
                 key={item.id}
-                variants={{ hidden: { opacity: 0, x: 24 }, visible: { opacity: 1, x: 0 } }}
+                variants={{
+                  hidden: { opacity: 0, x: 24 },
+                  visible: { opacity: 1, x: 0 },
+                }}
               >
                 <a
                   href={`#${item.id}`}
@@ -85,10 +97,14 @@ export function MobileMenu({ active, onNavigate }: MobileMenuProps) {
                   aria-current={active === item.id ? "location" : undefined}
                   className={cn(
                     "flex items-baseline gap-4 border-b py-3 font-display text-4xl tracking-tight transition-colors",
-                    active === item.id ? "text-foreground" : "text-muted-foreground hover:text-foreground",
+                    active === item.id
+                      ? "text-foreground"
+                      : "text-muted-foreground hover:text-foreground",
                   )}
                 >
-                  <span className="font-mono text-xs text-brand">{sectionNumber(item.id)}</span>
+                  <span className="font-mono text-xs text-brand">
+                    {sectionNumber(item.id)}
+                  </span>
                   {item.label}
                 </a>
               </motion.li>
@@ -97,7 +113,10 @@ export function MobileMenu({ active, onNavigate }: MobileMenuProps) {
         </nav>
 
         <div className="flex flex-col gap-3 border-t px-6 py-5 text-sm">
-          <a href={`mailto:${profile.email}`} className="text-muted-foreground hover:text-foreground">
+          <a
+            href={`mailto:${profile.email}`}
+            className="text-muted-foreground hover:text-foreground"
+          >
             {profile.email}
           </a>
           <div className="flex flex-wrap gap-x-4 gap-y-1">
@@ -107,7 +126,7 @@ export function MobileMenu({ active, onNavigate }: MobileMenuProps) {
                 href={social.href}
                 target="_blank"
                 rel="noreferrer"
-                className="font-mono text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground"
+                className="font-mono text-xs tracking-[0.15em] text-muted-foreground uppercase hover:text-foreground"
               >
                 {social.label}
               </a>
@@ -116,7 +135,7 @@ export function MobileMenu({ active, onNavigate }: MobileMenuProps) {
               href={profile.resumeUrl}
               target="_blank"
               rel="noreferrer"
-              className="font-mono text-xs uppercase tracking-[0.15em] text-brand"
+              className="font-mono text-xs tracking-[0.15em] text-brand uppercase"
             >
               Resume
             </a>

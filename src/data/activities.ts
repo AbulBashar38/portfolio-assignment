@@ -76,8 +76,7 @@ export const achievements: Achievement[] = [
     title: "AI + Prompt Engineering, Level 1",
     issuer: "AgentX",
     year: "2025",
-    description:
-      "Prompt engineering techniques for AI-assisted development.",
+    description: "Prompt engineering techniques for AI-assisted development.",
     image: {
       src: "/images/certificates/agentx-prompt-engineering.webp",
       alt: "AgentX AI and Prompt Engineering Level 1 certificate",

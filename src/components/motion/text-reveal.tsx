@@ -56,7 +56,9 @@ export function TextReveal({
       {...trigger}
       variants={{
         hidden: {},
-        visible: { transition: { staggerChildren: 0.06, delayChildren: delay } },
+        visible: {
+          transition: { staggerChildren: 0.06, delayChildren: delay },
+        },
       }}
     >
       {words.map((word, index) => (

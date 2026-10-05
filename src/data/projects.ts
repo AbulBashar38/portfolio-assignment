@@ -16,14 +16,30 @@ function shot(
 
 const archive = {
   hero: shot("bangladesh-archive", "hero", "Bangladesh Archive home page"),
-  video: shot("bangladesh-archive", "video", "Bangladesh Archive video archive page"),
-  podcast: shot("bangladesh-archive", "podcast", "Bangladesh Archive podcast page"),
-  martyrs: shot("bangladesh-archive", "martyrs", "Bangladesh Archive martyrs memorial page"),
+  video: shot(
+    "bangladesh-archive",
+    "video",
+    "Bangladesh Archive video archive page",
+  ),
+  podcast: shot(
+    "bangladesh-archive",
+    "podcast",
+    "Bangladesh Archive podcast page",
+  ),
+  martyrs: shot(
+    "bangladesh-archive",
+    "martyrs",
+    "Bangladesh Archive martyrs memorial page",
+  ),
 };
 
 const ostool = {
   hero: shot("ostool-ai", "hero", "Ostool AI marketing site hero"),
-  platform: shot("ostool-ai", "platform", "Ostool AI rental management platform overview"),
+  platform: shot(
+    "ostool-ai",
+    "platform",
+    "Ostool AI rental management platform overview",
+  ),
   blog: shot("ostool-ai", "blog", "Ostool AI blog page"),
   why: shot("ostool-ai", "why", "Ostool AI feature highlights section"),
   join: shot("ostool-ai", "join", "Ostool AI sign-up call to action"),
@@ -31,7 +47,11 @@ const ostool = {
 
 const ventureFly = {
   hero: shot("venture-fly-ai", "hero", "Venture Fly AI landing page"),
-  features: shot("venture-fly-ai", "features", "Venture Fly AI features section"),
+  features: shot(
+    "venture-fly-ai",
+    "features",
+    "Venture Fly AI features section",
+  ),
   form: shot("venture-fly-ai", "form", "Venture Fly AI guided validation form"),
   result: shot("venture-fly-ai", "result", "Venture Fly AI validation report"),
 };
@@ -40,18 +60,48 @@ const roadMobility = {
   hero: shot("road-mobility", "hero", "Road Mobility landing page", 825),
   home: shot("road-mobility", "home", "Road Mobility analytics dashboard", 903),
   chart: shot("road-mobility", "chart", "Road Mobility VMT chart view", 904),
-  profile: shot("road-mobility", "profile", "Road Mobility user profile page", 902),
+  profile: shot(
+    "road-mobility",
+    "profile",
+    "Road Mobility user profile page",
+    902,
+  ),
 };
 
 const scheduleBuddy = {
-  one: shot("schedule-buddy", "screen-1", "Schedule Buddy user directory with appointment buttons", 788),
-  two: shot("schedule-buddy", "screen-2", "Schedule Buddy appointment list with status filters", 762),
-  three: shot("schedule-buddy", "screen-3", "Schedule Buddy requested appointments awaiting approval", 759),
+  one: shot(
+    "schedule-buddy",
+    "screen-1",
+    "Schedule Buddy user directory with appointment buttons",
+    788,
+  ),
+  two: shot(
+    "schedule-buddy",
+    "screen-2",
+    "Schedule Buddy appointment list with status filters",
+    762,
+  ),
+  three: shot(
+    "schedule-buddy",
+    "screen-3",
+    "Schedule Buddy requested appointments awaiting approval",
+    759,
+  ),
 };
 
 const seaclub = {
-  home: shot("seaclub-marketplace", "home", "Seaclub marketplace home page", 784),
-  profile: shot("seaclub-marketplace", "profile", "Seaclub provider profile page", 784),
+  home: shot(
+    "seaclub-marketplace",
+    "home",
+    "Seaclub marketplace home page",
+    784,
+  ),
+  profile: shot(
+    "seaclub-marketplace",
+    "profile",
+    "Seaclub provider profile page",
+    784,
+  ),
   team: shot("seaclub-marketplace", "team", "Seaclub team page", 784),
 };
 
@@ -67,7 +117,14 @@ export const projects: Project[] = [
     duration: "Aug 2024 — Present",
     featured: true,
     liveUrl: "https://bangladesh2024.info",
-    stack: ["Next.js", "React", "Redux", "Tailwind CSS", "shadcn/ui", "WebSockets"],
+    stack: [
+      "Next.js",
+      "React",
+      "Redux",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "WebSockets",
+    ],
     overview: [
       "Bangladesh Archive collects, verifies and preserves large-scale social media content from the July 2024 Movement to keep a historically accurate, publicly accessible record.",
       "The project runs on 300+ contributors across frontend, backend, data collection, PR and project management, and is made up of three connected apps: a data-collection tool for automated ingestion, an admin dashboard for verification, and the public archive.",
@@ -104,7 +161,15 @@ export const projects: Project[] = [
     duration: "2024",
     featured: true,
     liveUrl: "https://ostool.ai/en",
-    stack: ["Next.js 15", "Payload CMS", "Redux Toolkit", "NextAuth", "next-intl", "Tailwind CSS", "Chart.js"],
+    stack: [
+      "Next.js 15",
+      "Payload CMS",
+      "Redux Toolkit",
+      "NextAuth",
+      "next-intl",
+      "Tailwind CSS",
+      "Chart.js",
+    ],
     overview: [
       "Ostool AI gives rental companies one application to manage fleet, reservations, contracts, customers and maintenance, alongside a CMS-driven site for customer acquisition.",
       "It includes inventory management, booking flows, customer profiles, service records, role-based permissions, analytics dashboards with XLSX/PDF export, and full RTL/LTR support.",
@@ -126,7 +191,13 @@ export const projects: Project[] = [
       "Built dashboards, analytics and export workflows",
     ],
     cover: ostool.hero,
-    gallery: [ostool.hero, ostool.platform, ostool.why, ostool.blog, ostool.join],
+    gallery: [
+      ostool.hero,
+      ostool.platform,
+      ostool.why,
+      ostool.blog,
+      ostool.join,
+    ],
   },
   {
     id: "venture-fly-ai",
@@ -139,7 +210,15 @@ export const projects: Project[] = [
     duration: "4 months",
     featured: true,
     liveUrl: "https://ventureflyai.com",
-    stack: ["Next.js 15", "React 19", "Node.js", "MongoDB", "Mongoose", "TanStack Query", "Tailwind CSS"],
+    stack: [
+      "Next.js 15",
+      "React 19",
+      "Node.js",
+      "MongoDB",
+      "Mongoose",
+      "TanStack Query",
+      "Tailwind CSS",
+    ],
     overview: [
       "Venture Fly AI helps entrepreneurs validate business ideas before investing time and money, assessing both the founder and the idea through personality and skills assessment plus AI-assisted market analysis.",
       "The flow moves from a public landing page through secure sign-in and a guided, backend-enforced validation process to a dashboard of structured reports.",
@@ -160,7 +239,12 @@ export const projects: Project[] = [
       "Kept frontend routing and backend validation in sync",
     ],
     cover: ventureFly.hero,
-    gallery: [ventureFly.hero, ventureFly.features, ventureFly.form, ventureFly.result],
+    gallery: [
+      ventureFly.hero,
+      ventureFly.features,
+      ventureFly.form,
+      ventureFly.result,
+    ],
   },
   {
     id: "road-mobility",
@@ -173,7 +257,14 @@ export const projects: Project[] = [
     duration: "3 months",
     featured: true,
     liveUrl: "https://road-mobility-five.vercel.app/v2/home",
-    stack: ["Next.js 14", "TanStack Query", "Chart.js", "NextAuth", "MySQL", "Tailwind CSS"],
+    stack: [
+      "Next.js 14",
+      "TanStack Query",
+      "Chart.js",
+      "NextAuth",
+      "MySQL",
+      "Tailwind CSS",
+    ],
     overview: [
       "Road Mobility tracks near-real-time vehicle mobility and Vehicle Miles Traveled (VMT) across the United States, combining actual mobility signals with forecasts.",
       "Historical models broke down during COVID-era disruptions; Road Mobility gives energy, transportation and demand-forecasting teams faster indicators by region, motive and frequency.",
@@ -195,7 +286,12 @@ export const projects: Project[] = [
       "Tuned client-side caching with React Query",
     ],
     cover: roadMobility.hero,
-    gallery: [roadMobility.hero, roadMobility.home, roadMobility.chart, roadMobility.profile],
+    gallery: [
+      roadMobility.hero,
+      roadMobility.home,
+      roadMobility.chart,
+      roadMobility.profile,
+    ],
   },
   {
     id: "seaclub-marketplace",
@@ -248,7 +344,11 @@ export const projects: Project[] = [
       "Make booking and approving appointments between users simple and transparent.",
     solution:
       "A dashboard with separate views for people, my appointments and requests, backed by Firebase authentication and a real-time database.",
-    results: ["Real-time sync", "Cross-device support", "Clear approval workflow"],
+    results: [
+      "Real-time sync",
+      "Cross-device support",
+      "Clear approval workflow",
+    ],
     contributions: [
       "Designed and built the app end to end",
       "Implemented Firebase authentication and real-time data",
