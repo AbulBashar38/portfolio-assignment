@@ -1,19 +1,15 @@
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { Reveal } from "@/components/motion/reveal";
+import { About } from "@/components/sections/about/about";
 import { Hero } from "@/components/sections/hero/hero";
 import type { SectionId } from "@/types";
 
 const outline: {
-  id: Exclude<SectionId, "home">;
+  id: Exclude<SectionId, "home" | "about">;
   title: string;
   description: string;
 }[] = [
-  {
-    id: "about",
-    title: "Engineer, team lead, student.",
-    description: "Who I am and how I like to work.",
-  },
   {
     id: "education",
     title: "Where I studied.",
@@ -45,6 +41,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <About />
 
       {outline.map((section) => (
         <Section key={section.id} id={section.id}>
