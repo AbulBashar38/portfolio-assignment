@@ -136,7 +136,6 @@ src/
 public/
   images/       profile photos, project screenshots, certificates (WebP)
 docs/
-  PLAN.md       build plan and progress
   screenshots/  README screenshots (desktop and mobile)
 ```
 
