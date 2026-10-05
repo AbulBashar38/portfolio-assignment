@@ -2,6 +2,7 @@ import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { Reveal } from "@/components/motion/reveal";
 import { AboutPhoto } from "@/components/sections/about/about-photo";
+import { QuickFacts } from "@/components/sections/about/quick-facts";
 import { profile } from "@/data/profile";
 
 export function About() {
@@ -30,6 +31,8 @@ export function About() {
               </Reveal>
             ))}
           </div>
+
+          <QuickFacts />
         </div>
       </div>
     </Section>
