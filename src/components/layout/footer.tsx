@@ -10,12 +10,12 @@ export function Footer() {
   return (
     <footer className="overflow-hidden border-t">
       <Container className="pt-16 pb-10 md:pt-24">
+        {/* Rendered as generated content so it stays purely decorative. */}
         <p
           aria-hidden
-          className="font-display text-[19vw] leading-[0.8] tracking-[-0.03em] whitespace-nowrap text-foreground/[0.07] select-none lg:text-[12.5rem]"
-        >
-          {profile.name}
-        </p>
+          data-wordmark={profile.name}
+          className="font-display text-[19vw] leading-[0.8] tracking-[-0.03em] whitespace-nowrap text-foreground/[0.07] select-none before:content-[attr(data-wordmark)] lg:text-[12.5rem]"
+        />
 
         <div className="mt-12 grid gap-6 border-t pt-8 font-mono text-[0.6875rem] tracking-[0.2em] text-muted-foreground uppercase sm:grid-cols-3 sm:items-center">
           <p>
