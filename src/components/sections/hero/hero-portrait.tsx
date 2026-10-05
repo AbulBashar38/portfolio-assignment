@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 import { profile } from "@/data/profile";
 import { useParallax } from "@/hooks/use-parallax";
-import { easeOut } from "@/lib/motion";
+import { easeOut, heroTimeline } from "@/lib/motion";
 
 const corners = [
   "-top-3 -left-3",
@@ -59,20 +59,32 @@ export function HeroPortrait() {
             strokeWidth="0.35"
             initial={{ pathLength: 0, opacity: 0 }}
             animate={{ pathLength: 1, opacity: 1 }}
-            transition={{ duration: 1.8, delay: 0.8, ease: easeOut }}
+            transition={{
+              duration: 1.8,
+              delay: heroTimeline.circle,
+              ease: easeOut,
+            }}
           />
         </motion.svg>
 
         <motion.div
           initial={{ clipPath: "inset(100% 0% 0% 0%)" }}
           animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
-          transition={{ duration: 1.2, delay: 0.2, ease: easeOut }}
+          transition={{
+            duration: 1.2,
+            delay: heroTimeline.portrait,
+            ease: easeOut,
+          }}
           className="relative aspect-[4/5] overflow-hidden rounded-sm bg-muted"
         >
           <motion.div
             initial={{ scale: 1.15 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 1.6, delay: 0.2, ease: easeOut }}
+            transition={{
+              duration: 1.6,
+              delay: heroTimeline.portrait,
+              ease: easeOut,
+            }}
             style={{ y: imageY }}
             className="absolute inset-x-0 -top-[12%] h-[124%]"
           >
@@ -95,7 +107,11 @@ export function HeroPortrait() {
           aria-hidden
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 0.6, delay: 1.3, ease: easeOut }}
+          transition={{
+            duration: 0.6,
+            delay: heroTimeline.accent,
+            ease: easeOut,
+          }}
           className="absolute -bottom-5 left-8 size-10 origin-bottom-left bg-brand"
         />
       </div>

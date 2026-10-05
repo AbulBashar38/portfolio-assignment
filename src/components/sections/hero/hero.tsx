@@ -8,6 +8,7 @@ import { ScrollCue } from "@/components/sections/hero/scroll-cue";
 import { SocialLinks } from "@/components/shared/social-links";
 import { Button } from "@/components/ui/button";
 import { profile } from "@/data/profile";
+import { heroTimeline } from "@/lib/motion";
 
 export function Hero() {
   const [firstName, ...rest] = profile.name.split(" ");
@@ -21,7 +22,7 @@ export function Hero() {
     >
       <Container className="grid gap-14 lg:grid-cols-12 lg:gap-10">
         <div className="flex flex-col lg:col-span-7">
-          <Reveal direction="none">
+          <Reveal direction="none" delay={heroTimeline.meta}>
             <p className="flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase">
               <span>{profile.location}</span>
               <span
@@ -43,11 +44,17 @@ export function Hero() {
             aria-label={profile.name}
             className="mt-5 font-display text-[clamp(3.75rem,12vw,8rem)] leading-[0.86] tracking-[-0.02em] lg:text-[clamp(4.5rem,14vh,8rem)]"
           >
-            <TextReveal as="span" onMount text={firstName} className="block" />
             <TextReveal
               as="span"
               onMount
-              delay={0.1}
+              delay={heroTimeline.firstName}
+              text={firstName}
+              className="block"
+            />
+            <TextReveal
+              as="span"
+              onMount
+              delay={heroTimeline.lastName}
               text={lastName}
               className="block md:pl-[0.6em]"
             />
@@ -56,18 +63,21 @@ export function Hero() {
           <TextReveal
             as="p"
             onMount
-            delay={0.35}
+            delay={heroTimeline.role}
             text={profile.role}
             className="mt-5 font-display text-3xl text-brand italic md:text-4xl"
           />
 
-          <Reveal delay={0.6}>
+          <Reveal delay={heroTimeline.summary}>
             <p className="mt-6 max-w-[52ch] text-base text-muted-foreground md:text-lg">
               {profile.summary}
             </p>
           </Reveal>
 
-          <Reveal delay={0.7} className="mt-8 flex flex-wrap gap-3">
+          <Reveal
+            delay={heroTimeline.actions}
+            className="mt-8 flex flex-wrap gap-3"
+          >
             <Button asChild className="h-11 px-5">
               <a href="#projects">
                 See selected work
@@ -79,7 +89,7 @@ export function Hero() {
             </Button>
           </Reveal>
 
-          <Reveal delay={0.8} className="mt-10">
+          <Reveal delay={heroTimeline.socials} className="mt-10">
             <SocialLinks />
           </Reveal>
         </div>
@@ -91,7 +101,7 @@ export function Hero() {
 
       <Reveal
         direction="none"
-        delay={1.4}
+        delay={heroTimeline.scrollCue}
         className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 lg:block"
       >
         <ScrollCue />
