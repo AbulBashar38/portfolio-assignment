@@ -3,6 +3,7 @@ import { SectionHeading } from "@/components/layout/section-heading";
 import { Reveal } from "@/components/motion/reveal";
 import { AboutPhoto } from "@/components/sections/about/about-photo";
 import { QuickFacts } from "@/components/sections/about/quick-facts";
+import { StatsBand } from "@/components/sections/about/stats-band";
 import { profile } from "@/data/profile";
 
 export function About() {
@@ -35,6 +36,8 @@ export function About() {
           <QuickFacts />
         </div>
       </div>
+
+      <StatsBand />
     </Section>
   );
 }
