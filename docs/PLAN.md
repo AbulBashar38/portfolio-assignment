@@ -13,7 +13,7 @@ Deadline: **9 October 2026, 11:59 PM**.
 
 ## Phase 2 — Sections
 
-- [ ] **Step 5 — Navbar.** Sticky header, smooth-scroll anchors, active-section highlight, mobile Sheet menu, theme toggle.
+- [x] **Step 5 — Navbar.** Sticky header, smooth-scroll anchors, active-section highlight, mobile Sheet menu, theme toggle.
 - [ ] **Step 6 — Home / Hero.** Name, role, short pitch, CTAs (projects, resume), social links, portrait, animated headline, subtle shapes.
 - [ ] **Step 7 — About Me.** Bio, photo, quick facts, animated stats counters.
 - [ ] **Step 8 — Education.** Degrees (SEU, Polytechnic) with CGPA, period, location; certifications.
