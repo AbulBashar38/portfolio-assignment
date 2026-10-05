@@ -1,6 +1,6 @@
 import { ArrowUpRightIcon } from "lucide-react";
-import Image from "next/image";
 
+import { ProjectGallery } from "@/components/sections/projects/project-gallery";
 import { StackList } from "@/components/sections/projects/stack-list";
 import { Button } from "@/components/ui/button";
 import {
@@ -71,15 +71,7 @@ export function ProjectDialog({ project, children }: ProjectDialogProps) {
         </header>
 
         <div className="px-6 pt-8 md:px-10">
-          <div className="relative aspect-[16/10] overflow-hidden rounded-sm border bg-muted">
-            <Image
-              src={project.cover.src}
-              alt={project.cover.alt}
-              fill
-              sizes="(min-width: 1024px) 60rem, 100vw"
-              className="object-cover object-top"
-            />
-          </div>
+          <ProjectGallery images={project.gallery} />
         </div>
 
         <div className="grid gap-12 px-6 py-10 md:grid-cols-12 md:px-10 md:py-12">
