@@ -67,16 +67,7 @@ export function HeroPortrait() {
           />
         </motion.svg>
 
-        <motion.div
-          initial={{ clipPath: "inset(100% 0% 0% 0%)" }}
-          animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
-          transition={{
-            duration: 1.2,
-            delay: heroTimeline.portrait,
-            ease: easeOut,
-          }}
-          className="relative aspect-[4/5] overflow-hidden rounded-sm bg-muted"
-        >
+        <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-muted">
           <motion.div
             initial={{ scale: 1.15 }}
             animate={{ scale: 1 }}
@@ -97,7 +88,24 @@ export function HeroPortrait() {
               className="object-cover object-top"
             />
           </motion.div>
-        </motion.div>
+
+          {/*
+            A background-coloured curtain that lifts away to reveal the photo.
+            Unlike a clip-path, the photo itself is painted immediately, so it
+            doesn't delay Largest Contentful Paint.
+          */}
+          <motion.span
+            aria-hidden
+            initial={{ scaleY: 1 }}
+            animate={{ scaleY: 0 }}
+            transition={{
+              duration: 1.2,
+              delay: heroTimeline.portrait,
+              ease: easeOut,
+            }}
+            className="absolute inset-0 origin-top bg-background"
+          />
+        </div>
 
         {corners.map((position) => (
           <CropMark key={position} className={position} />
