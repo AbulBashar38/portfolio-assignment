@@ -45,9 +45,10 @@ src/
   app/          root layout, page and global styles
   components/
     ui/         shadcn/ui primitives
-    layout/     container, section and section heading
+    layout/     navbar, mobile menu, theme toggle, container, section heading
     motion/     reusable animation wrappers (Reveal, Stagger, TextReveal)
     providers/  theme and motion providers
+  hooks/        client hooks (active section, mounted)
   data/         all site content (profile, education, experience, projects, skills…)
   lib/          shared utilities
   types/        shared TypeScript types
