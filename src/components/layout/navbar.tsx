@@ -4,6 +4,7 @@ import { ArrowUpRightIcon } from "lucide-react";
 import { motion } from "motion/react";
 
 import { Container } from "@/components/layout/container";
+import { MobileMenu } from "@/components/layout/mobile-menu";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { navigation } from "@/data/navigation";
@@ -61,6 +62,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-1">
           <ThemeToggle />
+          <MobileMenu active={active} />
           <Button
             variant="outline"
             size="sm"
