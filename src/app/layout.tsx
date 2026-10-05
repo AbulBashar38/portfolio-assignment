@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { profile } from "@/data/profile";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,9 +22,8 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Abul Basar — Software Engineer",
-  description:
-    "Portfolio of Abul Basar, a software engineer building scalable, high-performance web applications with React, Next.js and TypeScript.",
+  title: `${profile.name} — ${profile.role}`,
+  description: profile.summary,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
