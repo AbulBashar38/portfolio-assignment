@@ -1,7 +1,8 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
+import { useRef } from "react";
 
 import { profile } from "@/data/profile";
 import { easeOut } from "@/lib/motion";
@@ -27,12 +28,25 @@ function CropMark({ className }: { className: string }) {
 }
 
 export function HeroPortrait() {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  // The photo drifts slower than the page; the circle drifts the other way.
+  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
+  const circleY = useTransform(scrollYProgress, [0, 1], ["0%", "-40%"]);
+
   return (
-    <figure className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none">
+    <figure
+      ref={ref}
+      className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none"
+    >
       <div className="relative">
-        <svg
+        <motion.svg
           aria-hidden
           viewBox="0 0 100 100"
+          style={{ y: circleY }}
           className="absolute -top-12 -right-10 size-44 text-brand sm:size-56 lg:-top-16 lg:-right-14 lg:size-64"
         >
           <motion.circle
@@ -46,7 +60,7 @@ export function HeroPortrait() {
             animate={{ pathLength: 1, opacity: 1 }}
             transition={{ duration: 1.8, delay: 0.8, ease: easeOut }}
           />
-        </svg>
+        </motion.svg>
 
         <motion.div
           initial={{ clipPath: "inset(100% 0% 0% 0%)" }}
@@ -58,7 +72,8 @@ export function HeroPortrait() {
             initial={{ scale: 1.15 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1.6, delay: 0.2, ease: easeOut }}
-            className="absolute inset-0"
+            style={{ y: imageY }}
+            className="absolute inset-x-0 -top-[12%] h-[124%]"
           >
             <Image
               src={profile.portrait.src}
