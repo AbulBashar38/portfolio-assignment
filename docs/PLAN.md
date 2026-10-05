@@ -17,7 +17,7 @@ Deadline: **9 October 2026, 11:59 PM**.
 - [x] **Step 6 — Home / Hero.** Name, role, short pitch, CTAs (projects, resume), social links, portrait, animated headline, subtle shapes.
 - [x] **Step 7 — About Me.** Bio, photo, quick facts, animated stats counters.
 - [x] **Step 8 — Education.** Degrees (SEU, Polytechnic) with CGPA, period, location; certifications.
-- [ ] **Step 9 — Skills.** Grouped categories (frontend, backend, architecture, quality, tools, leadership), tech marquee, hover states — no percentage bars.
+- [x] **Step 9 — Skills.** Grouped categories (frontend, backend, architecture, quality, tools, leadership), tech marquee, hover states — no percentage bars.
 - [ ] **Step 10 — Projects.** Featured project layout + grid, tags, live links, detail Dialog with screenshot gallery, challenge/solution/results.
 - [ ] **Step 11 — Experience & Activities.** Work timeline with highlights; leadership/volunteer activities; achievements & certificates.
 - [ ] **Step 12 — Contact & Footer.** Contact form (validated) + direct email/phone/location/socials, copy-email, footer with back-to-top.
