@@ -14,7 +14,7 @@ export function About() {
       <SectionHeading id="about" title="Engineer, team lead, student." />
 
       <div className="grid gap-16 lg:grid-cols-12 lg:gap-10">
-        <div className="lg:col-span-5">
+        <div className="lg:sticky lg:top-28 lg:col-span-5 lg:self-start">
           <AboutPhoto />
         </div>
 
