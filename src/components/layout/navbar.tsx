@@ -1,7 +1,12 @@
 "use client";
 
 import { ArrowUpRightIcon } from "lucide-react";
-import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useSpring,
+} from "motion/react";
 import { useState } from "react";
 
 import { Container } from "@/components/layout/container";
@@ -18,7 +23,12 @@ const links = navigation.filter((item) => item.id !== "home");
 
 export function Navbar() {
   const active = useActiveSection(sectionIds);
-  const { scrollY } = useScroll();
+  const { scrollY, scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, {
+    stiffness: 200,
+    damping: 40,
+    restDelta: 0.001,
+  });
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
 
@@ -96,6 +106,12 @@ export function Navbar() {
           <MobileMenu active={active} />
         </div>
       </Container>
+
+      <motion.div
+        aria-hidden
+        style={{ scaleX: progress }}
+        className="absolute inset-x-0 -bottom-px h-px origin-left bg-brand"
+      />
     </motion.header>
   );
 }
