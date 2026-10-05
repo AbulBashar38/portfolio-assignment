@@ -40,7 +40,7 @@ export function HeroPortrait() {
   return (
     <figure
       ref={ref}
-      className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none"
+      className="relative mx-auto w-full max-w-sm sm:max-w-md lg:mr-0 lg:max-w-[min(100%,24rem)]"
     >
       <div className="relative">
         <motion.svg
