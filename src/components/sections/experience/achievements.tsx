@@ -55,7 +55,7 @@ export function Achievements() {
                 </button>
               </DialogTrigger>
 
-              <DialogContent className="gap-0 rounded-md p-0 sm:max-w-3xl">
+              <DialogContent className="gap-0 rounded-md p-0 sm:max-w-3xl [&>[data-slot=dialog-close]]:bg-background/90 [&>[data-slot=dialog-close]]:backdrop-blur">
                 <div className="relative aspect-[7/5] w-full overflow-hidden rounded-t-md bg-muted">
                   <Image
                     src={achievement.image.src}
