@@ -49,7 +49,7 @@ export function Hero() {
               delay={heroTimeline.firstName}
               text={firstName}
               className="block"
-            />
+            />{" "}
             <TextReveal
               as="span"
               onMount
