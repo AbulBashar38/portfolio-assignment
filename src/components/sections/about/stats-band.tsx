@@ -15,13 +15,12 @@ export function StatsBand() {
           as="li"
           key={stat.label}
           className={cn(
-            "flex flex-col gap-3 px-1 py-8 sm:px-6 lg:py-10",
+            "flex flex-col gap-3 py-8 pr-4 lg:py-10",
             // Rules between cells: vertical on every column but the first,
             // horizontal between the two rows on small screens.
-            index % 2 === 1 && "border-l",
+            index % 2 === 1 && "border-l pl-5 sm:pl-8",
             index >= 2 && "border-t lg:border-t-0",
-            index === 2 && "lg:border-l",
-            index === 0 && "sm:pl-0",
+            index === 2 && "lg:border-l lg:pl-8",
           )}
         >
           <CountUp
