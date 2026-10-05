@@ -1,10 +1,11 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll } from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
 
 import { profile } from "@/data/profile";
+import { useParallax } from "@/hooks/use-parallax";
 import { easeOut, viewport } from "@/lib/motion";
 
 export function AboutPhoto() {
@@ -14,7 +15,7 @@ export function AboutPhoto() {
     offset: ["start end", "end start"],
   });
   // The outline frame lags behind the photo for a little depth.
-  const frameY = useTransform(scrollYProgress, [0, 1], ["6%", "-6%"]);
+  const frameY = useParallax(scrollYProgress, "6%", "-6%");
 
   return (
     <figure

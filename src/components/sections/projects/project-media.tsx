@@ -1,10 +1,11 @@
 "use client";
 
 import { ArrowUpRightIcon } from "lucide-react";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll } from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
 
+import { useParallax } from "@/hooks/use-parallax";
 import type { ImageAsset } from "@/types";
 
 interface ProjectMediaProps {
@@ -22,7 +23,7 @@ export function ProjectMedia({
     target: ref,
     offset: ["start end", "end start"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], ["-4%", "4%"]);
+  const y = useParallax(scrollYProgress, "-4%", "4%");
 
   return (
     <span

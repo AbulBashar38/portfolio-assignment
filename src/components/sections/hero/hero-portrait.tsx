@@ -1,10 +1,11 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll } from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
 
 import { profile } from "@/data/profile";
+import { useParallax } from "@/hooks/use-parallax";
 import { easeOut } from "@/lib/motion";
 
 const corners = [
@@ -34,8 +35,8 @@ export function HeroPortrait() {
     offset: ["start start", "end start"],
   });
   // The photo drifts slower than the page; the circle drifts the other way.
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
-  const circleY = useTransform(scrollYProgress, [0, 1], ["0%", "-40%"]);
+  const imageY = useParallax(scrollYProgress, "0%", "10%");
+  const circleY = useParallax(scrollYProgress, "0%", "-40%");
 
   return (
     <figure
