@@ -2,7 +2,7 @@
 
 A single-page personal portfolio built with Next.js. It presents my background, education, skills, projects, experience and contact details in one responsive, animated page.
 
-**Live site:** _deployment link coming soon_
+**Live site:** https://portfolio-assignment-pink-ten.vercel.app
 
 ## Sections
 
